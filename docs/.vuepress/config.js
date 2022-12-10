@@ -15,3 +15,20 @@ module.exports = {
   plugins,
   themeConfig,
 }
+// vssue 评论插件
+  plugins: [
+    [
+      "vuepress-plugin-vssue-global",
+      {
+        platform: "github",
+        title: "[Comment]<%- frontmatter.title %>",
+        needComments: true,
+        // 其他的 Vssue 配置
+        autoCreateIssue: true,
+        clientId: "b1d51b8fec35cc9be2c2",
+        clientSecret: "2908cbe9eca9dd271d7a04b7c43a445b7ecf63e2",
+        owner: "lql95",
+        repo: "lql-notes",
+      },
+    ],
+  ],
